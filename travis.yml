@@ -1,0 +1,7 @@
+os: linux
+dist: trusty
+language: csharp
+install: true
+mono: latest
+dotnet: 1.0.0-preview2003131
+sudo: required
