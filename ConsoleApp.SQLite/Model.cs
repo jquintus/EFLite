@@ -7,6 +7,7 @@ namespace ConsoleApp.SQLite
     {
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Post> Posts { get; set; }
+        public DbSet<Comment> Comments { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -30,5 +31,16 @@ namespace ConsoleApp.SQLite
 
         public int BlogId { get; set; }
         public Blog Blog { get; set; }
+
+        public List<Comment> Comments { get; set; }
+    }
+
+    public class Comment
+    {
+        public int CommentId{ get; set; }
+        public string Content { get; set; }
+
+        public int PostId { get; set; }
+        public Post Post { get; set; }
     }
 }
