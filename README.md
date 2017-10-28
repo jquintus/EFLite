@@ -69,3 +69,10 @@ in the following circumstances:
 **same copy** of the project from both environments.  Had I
 checked out either the Linux or Windows version to another
 directory, I would not have had to run restore.
+
+## Build Status
+
+| Status | Environment |
+|--------|-------------|
+| [![Build status](https://ci.appveyor.com/api/projects/status/t8l8xx1c7kalk4b2?svg=true)](https://ci.appveyor.com/project/jquintus/eflite) | Windows |
+| | Linux |
