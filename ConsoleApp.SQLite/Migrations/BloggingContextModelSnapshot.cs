@@ -43,7 +43,7 @@ namespace ConsoleApp.SQLite.Migrations
 
                     b.HasIndex("PostId");
 
-                    b.ToTable("Comment");
+                    b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("ConsoleApp.SQLite.Post", b =>

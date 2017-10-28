@@ -10,7 +10,7 @@ using System;
 namespace ConsoleApp.SQLite.Migrations
 {
     [DbContext(typeof(BloggingContext))]
-    [Migration("20171028181030_Comments")]
+    [Migration("20171028195712_Comments")]
     partial class Comments
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -44,7 +44,7 @@ namespace ConsoleApp.SQLite.Migrations
 
                     b.HasIndex("PostId");
 
-                    b.ToTable("Comment");
+                    b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("ConsoleApp.SQLite.Post", b =>
