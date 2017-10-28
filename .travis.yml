@@ -4,13 +4,8 @@ language: csharp
 install: true
 mono: none
 before_install:
-  - curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-  - sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-xenial-prod xenial main" > /etc/apt/sources.list.d/dotnetdev.list'
-  - sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
-  - sudo apt-get update
-  - sudo apt-get install dotnet-sdk-1.0.4
-dotnet: 2.0.0
+  - sudo apt-get dotnet-sdk-2.0.0
+dotnet: 1.0.4
 sudo: required
 script:
-  - apt-get install dotnet-sdk-1.0.4
   - ./build.sh
