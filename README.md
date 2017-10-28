@@ -21,6 +21,7 @@ Most of this code came from the [Getting Started with EF Core on .NET Core Conso
 1. Log into your new Linux box
 1. [Install .Net Core](https://www.microsoft.com/net/core#linuxubuntu)
     ```bash
+    curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
     sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-xenial-prod xenial main" > /etc/apt/sources.list.d/dotnetdev.list'
     sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
     sudo apt-get update
