@@ -4,6 +4,13 @@ Spike of Entity Framework, SQLite, and .Net Core
 
 Most of this code came from the [Getting Started with EF Core on .NET Core Console App with a New database](https://docs.microsoft.com/en-us/ef/core/get-started/netcore/new-db-sqlite) tutorial.
 
+## Running
+
+1. Clone this repository
+1. `cd ConsoleApp.SQLite`
+1. Restore nuget packages: `dotnet restore`
+1. Run it: `dotnet run`
+
 ## Creating a new migration
 
 1. Edit [Model.cs](ConsoleApp.Sqlite/Model.cs)
