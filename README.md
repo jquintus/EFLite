@@ -72,7 +72,9 @@ directory, I would not have had to run restore.
 
 ## Build Status
 
-| Status | Environment | Notes |
-|--------|-------------|-------|
-| [![Build status](https://ci.appveyor.com/api/projects/status/t8l8xx1c7kalk4b2?svg=true)](https://ci.appveyor.com/project/jquintus/eflite) | Windows |  |
-| [![Build Status](https://travis-ci.org/jquintus/EFLite.svg?branch=master)](https://travis-ci.org/jquintus/EFLite) | Linux | This build will continue to fail until [Cake targets netcoreapp2.0](https://github.com/cake-build/cake/issues/1781).  The problem is that Cake needs .net core version 1.04 to run, but the application itself requires 2.0 and I can't get **both** installed on Travis. |
+| Status | Environment |
+|--------|-------------|
+| [![Build status](https://ci.appveyor.com/api/projects/status/t8l8xx1c7kalk4b2?svg=true)](https://ci.appveyor.com/project/jquintus/eflite) | Windows |
+| [![Build Status](https://travis-ci.org/jquintus/EFLite.svg?branch=master)](https://travis-ci.org/jquintus/EFLite) | Linux`*` |
+
+`*`This build will continue to fail until [Cake targets netcoreapp2.0](https://github.com/cake-build/cake/issues/1781).  The problem is that Cake needs .net core version 1.04 to run, but the application itself requires 2.0 and I can't get **both** installed on Travis.
