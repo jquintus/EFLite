@@ -30,9 +30,9 @@ Most of this code came from the [Getting Started with EF Core on .NET Core Conso
     ```bash
     sudo apt-get install sqlite3
     ```
-1. Install Mono (for Cake support)
+1. Install DotNet 1.0.4 (for Cake support)
     ```bash
-    sudo apt install mono-runtime
+    sudo apt-get install dotnet-dev-1.0.4
     ```
 
 ## Creating a new migration
@@ -54,4 +54,18 @@ Most of this code came from the [Getting Started with EF Core on .NET Core Conso
 
 ## Switching between Linux and Windows
 
-I wrote this using Windows Subsystem for Linux (WSL).  As such, I went back and forth between editing/running the code in Linux (vim) and Windows (vim/VSCode). Prior to debugging from VSCode you need to run `dotnet restore` on windows.  And then to switch back to running on Linux run the `dotnet restore` command again on Linux.
+I wrote this using Windows Subsystem for Linux (WSL).  As such,
+I went back and forth between editing/running the code in Linux
+(vim) and Windows (vim/VSCode).
+
+When switching from one to the other, things may not work
+unless you run the `dotnet restore` command.  This is required
+in the following circumstances:
+
+* Building/debugging in VSCode after switching from Linux
+* Running cake (`build.ps1` or `build.sh`) when switching
+
+*Note:* that this only impacted me because I was editing the
+**same copy** of the project from both environments.  Had I
+checked out either the Linux or Windows version to another
+directory, I would not have had to run restore.

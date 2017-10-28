@@ -5,13 +5,11 @@
 var target = Argument("target", "Default");
 var configuration = Argument("configuration", "Release");
 
-var sln = @"ConsoleApp.Sqlite/ConsoleApp.Sqlite.csproj";
-sln = @"**/*.csproj";
+var sln = @"ConsoleApp.SQLite/";
 
 ///////////////////////////////////////////////////////////////////////////////
 // TASKS
 ///////////////////////////////////////////////////////////////////////////////
-/*
 Task("Clean")
     .Does(() => 
 {
@@ -31,7 +29,6 @@ Task("Build")
 {
      var settings = new DotNetCoreBuildSettings
      {
-         Framework = "netcoreapp1.0",
          Configuration = configuration,
          OutputDirectory = "./artifacts/",
      };
@@ -39,9 +36,7 @@ Task("Build")
     DotNetCoreBuild(sln, settings);
 });
 
-*/
 Task("Default").IsDependentOn("Build");
-    .Does(() => Information ("Hello WOrld"));
 
 ///////////////////////////////////////////////////////////////////////////////
 // RUN
